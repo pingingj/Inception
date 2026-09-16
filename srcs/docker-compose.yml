@@ -1,0 +1,10 @@
+services:
+  nginx:
+    build:
+      context: ./requirements/nginx
+  mariadb:
+    build:
+      context: ./requirements/mariadb
+  wordpress:
+    build:
+      context: ./requirements/wordpress
