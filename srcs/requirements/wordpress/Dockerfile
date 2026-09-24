@@ -6,4 +6,6 @@ RUN apt-get update && \
         php8.2-mysql && \
     rm -rf /var/lib/apt/lists/*
 
+EXPOSE 9000
+
 CMD ["php-fpm8.2", "-F"]

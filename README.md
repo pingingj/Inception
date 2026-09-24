@@ -56,6 +56,12 @@ Features public and private channels (password protected, invite-only), channel 
 
 Docker study:
 https://docs.docker.com/get-started/docker-overview/
+
+https://docs.docker.com/reference/dockerfile
+
+https://mariadb.com/docs/server/server-management/automated-mariadb-deployment-and-administration/docker-and-mariadb/creating-a-custom-container-image
+
+
 ## AI Usage
 
 AI was used to help implement and understand the protocol used, as well as to help write this README.
