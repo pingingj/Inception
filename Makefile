@@ -28,7 +28,7 @@ up:
 	$(COMPOSE) up --build -d
 
 clean:
-	$(COMPOSE) down --rmi all
+	$(COMPOSE) down
 
 fclean: clean
 	$(COMPOSE) down -v

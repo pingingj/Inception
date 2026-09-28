@@ -1,5 +1,8 @@
 services:
   nginx:
+    container_name: nginx
+    env_file:
+      - .env
     restart: on-failure
     ports:
         - "443:443"
@@ -10,6 +13,12 @@ services:
     networks:
       - incepternet
   mariadb:
+    env_file:
+      - .env
+    container_name: mariadb
+    secrets:
+      - path_userdb
+      - path_rootdb
     restart: on-failure
     expose:
       - 3306
@@ -22,6 +31,9 @@ services:
     networks:
       - incepternet
   wordpress:
+    container_name: wordpress
+    env_file:
+      - .env
     restart: on-failure
     expose:
       - 9000
@@ -54,3 +66,8 @@ volumes:
       o: bind
       device: /home/${USER}/data/wordpress
   
+secrets:
+  path_userdb:
+    file: ../secrets/mariadbuser.txt
+  path_rootdb:
+    file: ../secrets/mariarute.txt
