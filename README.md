@@ -61,6 +61,7 @@ https://docs.docker.com/reference/dockerfile
 
 https://mariadb.com/docs/server/server-management/automated-mariadb-deployment-and-administration/docker-and-mariadb/creating-a-custom-container-image
 
+https://www.php.net/manual/en/install.fpm.configuration.php - List of global php-fpm.conf directives, List of pool directives
 
 ## AI Usage
 
