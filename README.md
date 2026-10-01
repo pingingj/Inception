@@ -63,6 +63,10 @@ https://mariadb.com/docs/server/server-management/automated-mariadb-deployment-a
 
 https://www.php.net/manual/en/install.fpm.configuration.php - List of global php-fpm.conf directives, List of pool directives
 
+https://developer.wordpress.org/cli/commands/ - wordpress commands
+
+https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-docker-compose - wordpress 
+
 ## AI Usage
 
 AI was used to help implement and understand the protocol used, as well as to help write this README.

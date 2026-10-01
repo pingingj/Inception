@@ -12,6 +12,8 @@ services:
     image: nginx
     networks:
       - incepternet
+    depends_on:
+      - wordpress
   mariadb:
     env_file:
       - .env
@@ -34,6 +36,10 @@ services:
     container_name: wordpress
     env_file:
       - .env
+    secrets:
+      - path_wpuser
+      - path_wpadmin
+      - path_userdb
     restart: on-failure
     expose:
       - 9000
@@ -45,6 +51,8 @@ services:
     image: wordpress
     networks:
       - incepternet
+    depends_on:
+      - mariadb
 
 networks:
   incepternet:
@@ -71,3 +79,7 @@ secrets:
     file: ../secrets/mariadbuser.txt
   path_rootdb:
     file: ../secrets/mariarute.txt
+  path_wpuser:
+    file: ../secrets/wordpressuser.txt
+  path_wpadmin:
+    file: ../secrets/wordpressadmin.txt
