@@ -13,7 +13,7 @@ COPY ./conf/config.cnf /etc/php/8.2/fpm/pool.d/www.conf
 
 COPY ./tools/wordpressscript.sh /usr/local/bin/wordpressscript.sh
 
-RUN chmod +x /usr/local/bin/wordpressscript.sh
+RUN chmod +x /usr/local/bin/wordpressscript.sh && chown -R www-data:www-data /var/www/html
 
 EXPOSE 9000
 
