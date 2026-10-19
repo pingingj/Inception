@@ -13,10 +13,13 @@ if [ ! -d "/var/lib/mysql/mysql" ]; then
     mariadb-install-db --user=mysql --datadir=/var/lib/mysql
 fi
 
+if [ -f /var/lib/mysql/.configured ]; then
+    exec mariadbd --user=mysql --datadir=/var/lib/mysql
+fi
+
 mariadbd --user=mysql --datadir=/var/lib/mysql --socket=/run/mysqld/mysqld.sock --skip-networking &
 PID=$!
-echo "Before PID: $!"
-echo "Current Bash PID: $$"
+
 for i in {1..10}; do
     if mariadb-admin --socket=/run/mysqld/mysqld.sock ping --silent; then
         break
@@ -39,7 +42,9 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY '${DB_PASSWORD_ROOT}';
 FLUSH PRIVILEGES;
 EOF
 
-echo "BEFORE PID: $!"
 mariadb-admin --socket=/run/mysqld/mysqld.sock -u root --password="${DB_PASSWORD_ROOT}" shutdown
+
 wait "$PID"
-exec mariadbd --user=mysql --datadir=/var/lib/mysql --socket=/run/mysqld/mysqld.sock
+touch /var/lib/mysql/.configured
+
+exec mariadbd --user=mysql --datadir=/var/lib/mysql

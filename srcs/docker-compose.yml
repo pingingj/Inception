@@ -13,7 +13,8 @@ services:
     networks:
       - incepternet
     depends_on:
-      - wordpress
+      wordpress:
+        condition: service_healthy
     volumes:
       - v_wordpress:/var/www/html
   mariadb:
@@ -34,6 +35,11 @@ services:
     image: mariadb
     networks:
       - incepternet
+    healthcheck:
+      test: ["CMD-SHELL", "mariadb -h localhost -u ${INTRA_USER} -p$$(cat /run/secrets/path_userdb) -e 'SELECT 1' >/dev/null 2>&1"]
+      interval: 1s
+      timeout: 2s
+      retries: 30
   wordpress:
     container_name: wordpress
     env_file:
@@ -51,10 +57,16 @@ services:
       context: ./requirements/wordpress
       dockerfile: Dockerfile
     image: wordpress
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "grep", "-q", "php-fpm", "/proc/1/cmdline"]
+      interval: 1s
+      timeout: 2s
+      retries: 30
     networks:
       - incepternet
-    depends_on:
-      - mariadb
 
 networks:
   incepternet:

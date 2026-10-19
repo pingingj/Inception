@@ -8,6 +8,18 @@ DB_PASSWORD_USER=$(cat /run/secrets/path_userdb)
 
 cd /var/www/html
 
+echo "Waiting for MariaDB..."
+
+until mariadb-admin ping \
+    --host=mariadb \
+    --user="$INTRA_USER" \
+    --password="$DB_PASSWORD_USER" \
+    --silent; do
+    sleep 2
+done
+
+echo "MariaDB is ready."
+
 if [ ! -f wp-load.php ]; then
     wp core download --allow-root
 fi
