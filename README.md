@@ -78,6 +78,8 @@ https://developer.wordpress.org/cli/commands/ - wordpress commands
 
 https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-docker-compose - wordpress 
 
+https://www.ssldragon.com/blog/port-80-vs-port-443/#What-Is-Port-80-HTTP - Port 80 (HTTP) vs Port 443 (HTTPS)
+
 ## AI Usage
 
 AI was used to help implement and understand the protocol used, as well as to help write this README.
