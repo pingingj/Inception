@@ -66,19 +66,28 @@ Secrets are sensitive keys of information such as passwords, these are protected
 
 https://docs.docker.com/get-started/docker-overview/ - Docker documentation
 
-https://docs.docker.com/reference/dockerfile - Dockerfile instructions
+https://medium.com/techmormo/how-do-docker-images-work-docker-made-easy-part-2-91d5c1a8d8a6 - What are Docker images and how they work.
 
-https://www.hostinger.com/tutorials/docker-cheat-sheet/?utm_source=google&utm_medium=cpc&utm_id=20959610637&utm_campaign=Generic-Tutorials-DSA-t1 - Docker commands on the terminal
+https://docs.docker.com/get-started/docker-concepts/building-images/writing-a-dockerfile/ - How to write a dockerfile.
 
-https://mariadb.com/docs/server/server-management/automated-mariadb-deployment-and-administration/docker-and-mariadb/creating-a-custom-container-image - helped creating mariadb docker image
+https://docs.docker.com/reference/dockerfile - Dockerfile instructions.
 
-https://www.php.net/manual/en/install.fpm.configuration.php - List of global php-fpm.conf directives, List of pool directives
+https://docs.docker.com/compose/ - About docker compose.
 
-https://developer.wordpress.org/cli/commands/ - wordpress commands
+https://docs.docker.com/engine/network/ - About docker networks.
 
-https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-docker-compose - wordpress 
+https://www.hostinger.com/tutorials/docker-cheat-sheet/?utm_source=google&utm_medium=cpc&utm_id=20959610637&utm_campaign=Generic-Tutorials-DSA-t1 - Docker commands on the terminal.
 
-https://www.ssldragon.com/blog/port-80-vs-port-443/#What-Is-Port-80-HTTP - Port 80 (HTTP) vs Port 443 (HTTPS)
+https://mariadb.com/docs/server/server-management/automated-mariadb-deployment-and-administration/docker-and-mariadb/creating-a-custom-container-image - Helped creating mariadb docker image.
+
+https://www.php.net/manual/en/install.fpm.configuration.php - List of global php-fpm.conf directives, List of pool directives.
+
+https://developer.wordpress.org/cli/commands/ - Wordpress commands.
+
+https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-docker-compose - Wordpress.
+
+https://www.ssldragon.com/blog/port-80-vs-port-443/#What-Is-Port-80-HTTP - Port 80 (HTTP) vs Port 443 (HTTPS).
+
 
 ## AI Usage
 
