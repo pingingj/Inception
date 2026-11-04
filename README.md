@@ -86,6 +86,10 @@ https://developer.wordpress.org/cli/commands/ - Wordpress commands.
 
 https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-docker-compose - Wordpress.
 
+https://www.controle.net/faq/web-server-o-que-e-como-funciona-um-servidor-web - Learning about a web server
+
+https://aws.amazon.com/pt/compare/the-difference-between-https-and-http/ - Learning about HTTP and HTTPS
+
 https://www.ssldragon.com/blog/port-80-vs-port-443/#What-Is-Port-80-HTTP - Port 80 (HTTP) vs Port 443 (HTTPS).
 
 
