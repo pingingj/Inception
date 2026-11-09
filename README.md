@@ -92,6 +92,7 @@ https://aws.amazon.com/pt/compare/the-difference-between-https-and-http/ - Learn
 
 https://www.ssldragon.com/blog/port-80-vs-port-443/#What-Is-Port-80-HTTP - Port 80 (HTTP) vs Port 443 (HTTPS).
 
+https://nginx.org/en/docs/beginners_guide.html - Guide to NGINX, helps with config file.
 
 ## AI Usage
 
