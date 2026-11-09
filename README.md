@@ -2,7 +2,7 @@
 
 # **Inception**
 
-# Description
+## Description
 
 Inception is a project designed to introduce the fundamentals of Docker and containerization.
 
@@ -29,7 +29,24 @@ Secrets are sensitive keys of information such as passwords, these are protected
 
 ## Docker network vs host network
 
+Using a host network as your docker network makes it so you use the same networks as the host's machine.
 
+As a result:
+- Containers have less network isolation from the host.
+- Containers use the host's ports directly.
+- Port conflicts can occur with services that are already using specific ports.
+- Port mapping (ports) is unnecessary and ignored.
+
+With docker network which by default is the bridge network, it creates a virtual network with its own network namespace and subnets, providing network isolation from containers and the host.
+- Containers have their own network interfaces and IP addresses.
+- Containers can communicate with each other through the virtual network.
+- Containers have network isolation from other networks.
+- On user-defined bridge networks, Docker provides automatic DNS resolution, allowing containers to communicate using their names instead of IP addresses.
+
+
+## Docker volumes vs Bind mounts
+
+Docker volumes are used for persistent storage. While a container is being used, information may be written to the docker volumes for them to then be used again after a container is destroyed and rebuilt again. Docker volumes are created and managed by docker, while bind mounts are volumes created and managed by the host.
 
 # Instructions
 
