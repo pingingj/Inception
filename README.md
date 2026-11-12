@@ -97,15 +97,19 @@ https://www.hostinger.com/tutorials/docker-cheat-sheet/?utm_source=google&utm_me
 
 https://mariadb.com/docs/server/server-management/automated-mariadb-deployment-and-administration/docker-and-mariadb/creating-a-custom-container-image - Helped creating mariadb docker image.
 
+https://mariadb.com/docs/server/server-usage/basics/mariadb-advanced-usage-guide-1 - How to use mariadb.
+
+https://mariadb.com/docs/server/clients-and-utilities/mariadb-client/mariadb-command-line-client - Mariadb command-line client.
+
 https://www.php.net/manual/en/install.fpm.configuration.php - List of global php-fpm.conf directives, List of pool directives.
 
 https://developer.wordpress.org/cli/commands/ - Wordpress commands.
 
 https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-docker-compose - Wordpress.
 
-https://www.controle.net/faq/web-server-o-que-e-como-funciona-um-servidor-web - Learning about a web server
+https://www.controle.net/faq/web-server-o-que-e-como-funciona-um-servidor-web - Learning about a web server.
 
-https://aws.amazon.com/pt/compare/the-difference-between-https-and-http/ - Learning about HTTP and HTTPS
+https://aws.amazon.com/pt/compare/the-difference-between-https-and-http/ - Learning about HTTP and HTTPS.
 
 https://www.ssldragon.com/blog/port-80-vs-port-443/#What-Is-Port-80-HTTP - Port 80 (HTTP) vs Port 443 (HTTPS).
 
