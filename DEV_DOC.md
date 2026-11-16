@@ -16,6 +16,37 @@ Requirements needed to create the project
 - Git - Repository of the project.
 - GNU make - Builds the project.
 
+### Configuration
+## Host configuration
+The project requires a domain name to resolve to the local machine.
+
+Add the following entry to `/etc/hosts`:
+
+	127.0.0.1 dgarcez-.42.fr
+
+Now your machine will know where to find the domain and is able to access the website with:
+
+	https://dgarcez-.42.fr
+
+### Secrets
+For sensitive data I store it in a secrets folder which contains passwords located in the root of the repository `./secrets`
+
+- MariaDBUser.txt - MariaDB User password
+- MariaDBRoot.txt - MariaDB Admin password
+- WordPressUser.txt - WordPress User Password
+- WordPressRoot.txt - WordPress Admin password
+
+For non sensitive data I created a .env file which contains information like:
+- DOMAIN_NAME="dgarcez-.42.fr"
+- DATABASE_NAME="wordpress"
+- INTRA_USER="dgarcez-"
+- WP_TITLE="inception"
+- WP_ADMIN_NAME="dgarcez-"
+- WP_USERNAME="user"
+- WP_USER_MAIL="user@gmail.com"
+- WP_ADMIN_MAIL="admin@gmail.com"
+- WP_URL="https://dgarcez-.42.fr"
+
 ## Installation
 
 ### Docker dependencies
@@ -77,26 +108,6 @@ To check if everything was installed correctly run these commands:
 	git --version
 	docker ps
 
-## Environment
-For sensitive data I store it in a secrets folder which contains passwords
-
-- MariaDBUser.txt - MariaDB User password
-- MariaDBRoot.txt - MariaDB Admin password
-- WordPressUser.txt - WordPress User Password
-- WordPressRoot.txt - WordPress Admin password
-
-For non sensitive data I created a .env file which contains information like:
-DOMAIN_NAME="dgarcez-.42.fr"
-DATABASE_NAME="wordpress"
-INTRA_USER="dgarcez-"
-
-# wordpress
-WP_TITLE="inception"
-WP_ADMIN_NAME="dgarcez-"
-WP_USERNAME="user"
-WP_USER_MAIL="user@gmail.com"
-WP_ADMIN_MAIL="admin@gmail.com"
-WP_URL="https://dgarcez-.42.fr"
-
-
-###  
+## Build and launch the project
+### Makefile
+The makefile has 
