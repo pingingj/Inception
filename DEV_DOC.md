@@ -110,4 +110,23 @@ To check if everything was installed correctly run these commands:
 
 ## Build and launch the project
 ### Makefile
-The makefile has 
+To build up the project you must go on your terminal, enter the repository directory and type in the command `make`
+
+	make
+
+It will then create the docker images and the 3 containers, to check if the containers are all stable and running use the command `docker ps`, which shows the status of each container.
+
+	docker ps
+
+To stop the project you can use the command `make fclean` which destroys all containers, images and volumes of the project.
+
+	make fclean
+
+If you want to just delete the current containers but keep the persistent data you can use `make clean`
+
+	make clean
+
+## Docker compose
+To build the project using docker compose go to the path `./srcs` of the repository on your terminal since the docker-compose.yml file is located there and use the command:
+
+	docker compose -f docker-compose.yml up --build -d
