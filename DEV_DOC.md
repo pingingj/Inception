@@ -174,4 +174,5 @@ When the containers are recreated, they can reconnect to the existing volumes an
 
 If a volume is deleted, the data stored inside it is permanently removed. When the project is started again, a new empty volume will be created, effectively resetting the persistent data.
 
-### Creation of volum
+### Creation of volumes
+
