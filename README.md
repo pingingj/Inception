@@ -97,9 +97,15 @@ https://www.hostinger.com/tutorials/docker-cheat-sheet/?utm_source=google&utm_me
 
 https://mariadb.com/docs/server/server-management/automated-mariadb-deployment-and-administration/docker-and-mariadb/creating-a-custom-container-image - Helped creating mariadb docker image.
 
-https://mariadb.com/docs/server/server-usage/basics/mariadb-advanced-usage-guide-1 - How to use mariadb.
+https://mariadb.com/docs/server/server-management/variables-and-modes/server-system-variables - Help with MariaDB config file.
+
+https://mariadb.com/docs/server/server-usage/basics/mariadb-advanced-usage-guide-1 - How to use MariaDB.
 
 https://mariadb.com/docs/server/clients-and-utilities/mariadb-client/mariadb-command-line-client - Mariadb command-line client.
+
+https://en.wikipedia.org/wiki/FastCGI - What is FastCGI.
+
+https://dev.to/arsalanmee/understanding-php-fpm-a-comprehensive-guide-3ng8 - Explanation of PHP-FPM and how to configure it.
 
 https://www.php.net/manual/en/install.fpm.configuration.php - List of global php-fpm.conf directives, List of pool directives.
 
