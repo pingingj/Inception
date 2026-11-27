@@ -90,10 +90,10 @@ volumes:
   
 secrets:
   path_userdb:
-    file: ../secrets/mariadbuser.txt
+    file: ../secrets/MariaDBUser.txt
   path_rootdb:
-    file: ../secrets/mariarute.txt
+    file: ../secrets/MariaDBRoot.txt
   path_wpuser:
-    file: ../secrets/wordpressuser.txt
+    file: ../secrets/WordPressUser.txt
   path_wpadmin:
-    file: ../secrets/wordpressadmin.txt
+    file: ../secrets/WordPressRoot.txt

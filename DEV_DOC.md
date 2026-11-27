@@ -49,6 +49,8 @@ For non sensitive data I created a .env file which contains information like:
 
 ## Installation
 
+This installation guide was made for Debian GNU/Linux 12 (bookworm) operative system.
+
 ### Docker dependencies
 To install the official docker repository curl, ca-certificates and gnupg must be installed since they are docker dependencies.
 
@@ -174,5 +176,14 @@ When the containers are recreated, they can reconnect to the existing volumes an
 
 If a volume is deleted, the data stored inside it is permanently removed. When the project is started again, a new empty volume will be created, effectively resetting the persistent data.
 
-### Creation of volumes
+### Location
+
+The volumes are stored in the host's machine located in `/home/<user>/data/`. This directory is created by the Makefile.
+
+In the project we have two volumes, one dedicated to MariaDB the other for WordPress.
+
+These volumes are then configured in the docker compose file telling docker where the volume is located in the host's machine.
+
+    device: /home/${USER}/data/mariadb
+	device: /home/${USER}/data/wordpress
 

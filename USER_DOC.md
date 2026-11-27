@@ -11,7 +11,7 @@ MariaDB is used as a database for WordPress, it stores information such as users
 MariaDB is connected to the WordPress container so it is able to receive said information and store it.
 The information stored in the database is also written in the named volumes so when the container is rebuilt is able to get back its information.
 
-### WordPress
+### WordPress + PHP-fpm
 Since WordPress is a PHP application its container needs a PHP runtime to execute the WordPress code. 
 WordPress container offers the main website to the user, executes PHP code and makes SQL queries (MariaDB).
 So this container has to be connected to MariaDB and NGINX since it interacts with the database and the webserver which isn't able to process PHP files.
@@ -27,6 +27,14 @@ Once the connection is established the user is able to interact with WordPress.
 For example if the user makes a post with WordPress, an HTTPS request is sent to NGINX which is then forwarded to PHP-fpm to execute the PHP code, the post is stored in the database and its result is sent back to the user, by showing the post.
 
 ## Start and stop
+
+Since the project requires secrets you must create a secrets directory and password files these commands will achieve that
+
+	mkdir secrets
+	echo "123root" > ./secrets/MariaDBRoot.txt
+	echo "123user" > ./secrets/MariaDBUser.txt
+	echo "123wproot" > ./secrets/WordPressRoot.txt
+	echo "123user" > ./secrets/WordPressUser.txt
 
 ### Start
 To start up the project you must go on your terminal, enter the repository directory and type in the command make
